@@ -3,15 +3,26 @@
 	margin: 0;
 	padding: 0;
 }
-
 body {
+    position: relative;
+    color: white;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-family: 'PT Sans', sans-serif;
 	background-color: rgb(235, 242, 243);
+    background-image: url(https://cdn.pixabay.com/photo/2012/01/09/09/48/earth-11593_960_720.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
+.bg-color {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 5;
+}
 .weatherApp {
 	display: flex;
 	flex-direction: column;
@@ -19,12 +30,17 @@ body {
 	align-items: center;
 	width: 80vw;
 	height: 80vh;
-	box-shadow: -2px 3px 40px 0px rgba(0, 168, 206, 1);
+    background-color: rgba (0,0,0,0.8);
+    z-index: 8;
+}
+.sendBtn {
+    margin: 10px;
+    font-size: 20px;
 }
 .cityName {
+    font-size: 40px;
     padding: 10px;
 }
-
 .topPart {
 	display: flex;
 	justify-content: space-evenly;
@@ -32,9 +48,10 @@ body {
 	align-items: center;
 	width: 30vw;
 	height: 30vh;
-
+    z-index: 10;
 }
 input {
+    text-align: center;
 	width: 80%;
     font-size: 25px;
 }
@@ -45,23 +62,20 @@ input {
 	justify-content: center;
 	align-items: center;
 }
-
 img {
 	height: 120px;
 	width: 120px;
 }
-
-
-
 .bottomPart {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-
 	width: 30vw;
 	height: 30vh;
+    z-index: 10;
 }
 p {
+    text-align: right;
 	display: block;
 	margin: 30px;
 }
@@ -71,12 +85,13 @@ p {
 	justify-content: space-around;
 	text-align: center;
 	line-height: 40px;
+    width: 70%;
 }
 .results div {
 	width: 100%;
 }
 .weatherResult {
+    border-bottom: 1px solid blue;
 	height: 50px;
 	width: 50px;
-
 }
