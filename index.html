@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Application by Tomasz Czechlewski</title>
+    <link rel="stylesheet" href='./main.css'>
 </head>
+
 <body>
-    
+    <div class="weatherApp">
+        <h1>Aplikacja pogodowa</h1>
+        <div class='topPart'>
+            <input type="text" placeholder="Tutaj wpisz nazwę miasta">
+            <button class="sendBtn">Wyslij</button>
+            <div class="weatherImg"></div>
+        </div>
+        <div class="bottomPart">
+            <div>
+                <p>Pogoda</p>
+                <p>Temperatura</p>
+                <p>Wilgotność</p>
+            </div>
+            <div class="results">
+                <div class="weatherResult weather"></div>
+                <div class="weatherResult temperature"></div>
+                <div class="weatherResult humidity"></div>
+            </div>
+           
+        </div>
+
+    </div>
+
+
 </body>
+
 </html>
