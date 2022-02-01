@@ -1,3 +1,5 @@
+// Data from html
+
 const input = document.querySelector('input')
 const btn = document.querySelector('button')
 const weatherImg = document.querySelector('.weatherImg img')
@@ -8,14 +10,17 @@ const humid = document.querySelector('.humidity')
 const pres = document.querySelector('.pressure')
 const wind = document.querySelector('.wind')
 
+// Api most important information needed to fetch
 const API_LINK = 'https://api.openweathermap.org/data/2.5/weather?q='
 const API_KEY = '&appid=5b61511832775aa861c9d464a8fef32f'
 const API_UNITS = '&units=metric'
 
+// main function with checking weather in OpenWeather API
 const getWeather = () => {
-	const city = input.value || 'poznań'
+	const city = input.value || 'Gdzie chcesz znać pogodę?'
 	const URL = API_LINK + city + API_KEY + API_UNITS
 
+    //used axios do get API data
 	axios.get(URL).then(res => {
 		const weat = res.data.weather[0].description
 		const hum = res.data.main.humidity
@@ -33,13 +38,13 @@ const getWeather = () => {
 		cityName.textContent = res.data.name
 	})
 }
-
+// function on enter keydown
 const enterKey = e => {
 	if (e.key === 'Enter') {
 		getWeather()
 	}
 }
 
-getWeather()
+// listeners
 btn.addEventListener('click', getWeather)
 input.addEventListener('keyup', enterKey)
