@@ -1,0 +1,7 @@
+const input = document.querySelector('input')
+const btn = document.querySelector('button')
+const weatherImg = document.querySelector('.weatherImg')
+const city = document.querySelector('.cityName')
+const weather = document.querySelector('.weather')
+const temp = document.querySelector('.temp')
+const humid = document.querySelector('.humidity')
